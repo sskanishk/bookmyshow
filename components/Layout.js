@@ -7,7 +7,7 @@ import useCountDown from "../hooks/useCountDown.js";
 
 function Layout() {
   const router = useRouter()
-      const time = 0.1;
+      const time = 5;
 
       // const disabledSeats = useStore(state => state.bookmyseat.disabledSeats)
       const showName = useStore(state => state.bookmyseat.showName)
@@ -117,9 +117,9 @@ function Layout() {
 
 
   };
-  // if(countDown === 'EXPIRED') {
-  //   router.push('/user')
-  // }
+  if(countDown === 'EXPIRED') {
+    router.push('/user')
+  }
   return (
     <div>
       <div className="grid grid-cols-12 gap-6">
